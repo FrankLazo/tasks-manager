@@ -1,0 +1,135 @@
+.task-container
+  // overflow: hidden
+
+.task-header
+  height: 3.75rem
+  margin-bottom: 1.5rem
+  border-radius: 1.875rem
+  background-color: #f4f4f4
+
+  &.with-details
+    margin-bottom: .5rem
+
+.important-task
+  border: 2px solid #ea85e0
+
+.checkTask
+  display: none
+  position: absolute !important
+
+  & + label
+    display: flex
+    align-items: center
+    height: 1.875rem
+    margin-bottom: 0
+    font-weight: 600
+    cursor: pointer
+
+  & + label:before
+    content: ''
+    display: inline-block
+    width: 1.875rem
+    height: 1.875rem
+    margin-right: 1rem
+    margin-left: calc(1.875rem / 2)
+    border: .25rem solid #cecee4
+    border-radius: 100%
+    background-color: #f4f4f4
+    transition: background-color 300ms ease-out, border-color 300ms ease-out !important
+
+  &:hover + label:before
+    border-color: #6664cc
+    transition: border-color 300ms ease-out
+
+  &:checked + label:before
+    background-color: #6664cc
+    transition: background-color 300ms ease-out
+
+  &:checked + label:after
+    content: ''
+    position: absolute
+    left: 25px !important
+    background: white
+    width: 2px
+    height: 2px
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white
+    transform: rotate(45deg)
+
+.detailsTask
+  display: none
+  position: absolute !important
+
+  & + label
+    content:''
+    display: flex
+    align-items: center
+    height: 1.875rem
+    margin-bottom: 0
+    margin-right: 1.875rem
+    cursor: pointer
+
+    div
+      width: 6px
+      height: 6px
+      border-radius: 3px
+      background: #6664cc
+
+  & + label:before,
+  & + label:after
+    content:''
+    width: 6px
+    height: 6px
+    background: #6664cc
+    border-radius: 3px
+
+  & + label:before
+    margin-right: .25rem
+
+  & + label:after
+    margin-left: .25rem
+
+.task-content
+  margin: 0 1.875rem 1.5rem 3.75rem
+  overflow: hidden
+
+  .task-container
+    // animation-name: detailTranslate
+    // animation-duration: 300ms
+
+  p
+    padding: .5rem
+    margin-bottom: .5rem
+    border-radius: .5rem
+    background-color: #cecee4
+
+  .btn-delete-task,
+  .btn-edit-task
+    height: 2rem
+    padding: 0 1rem
+    border: none
+    border-radius: 1rem
+    font-size: .875rem
+    transition:
+      property: background-color, color
+      duration: 300ms
+
+  .btn-delete-task
+    background-color: #f4f4f4
+
+    &:hover
+      background-color: #cecee4
+
+  .btn-edit-task
+    background-color: #cecee4
+
+    &:hover
+      color: white !important
+      background-color: #6664cc
+
+// @keyframes detailTranslate
+//   0%
+//     height: 0
+//     transform: translate(0, -100%)
+//   100%
+//     height: auto
+//     transform: translate(0, 0)

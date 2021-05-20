@@ -1,0 +1,128 @@
+.editTasks
+  padding: 7.5rem 2rem 0 2rem !important
+  background-color: #6664cc
+
+  header
+    height: 3rem
+    margin-top: 2rem
+
+    .icon-new-task
+      width: 3rem
+      height: 3rem
+      background-image: url('../../assets/new-task-icon.png')
+      background-size: 3rem
+
+    h3
+      margin-left: .75rem
+      color: white !important
+
+    .cancel-edit-task-btn
+      height: 2rem
+      padding: 0 1rem
+      margin-left: .75rem
+      border: none
+      border-radius: 1rem
+      background-color: #ea85e0
+      color: white
+      font-size: .75rem
+      transition: 
+        property: box-shadow
+        duration: 300ms
+
+      &:hover
+        box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .5)
+
+  form
+    // width: 100%
+    margin-top: 3.75rem
+
+    .new-task-input,
+    .new-task-btn
+      width: 100%
+      margin-bottom: 1.5rem
+      padding: 0 1.875rem
+      border: none
+      outline: none
+      color: white
+
+    .new-task-input
+      height: 3.75rem
+      border-radius: 1.875rem
+      background-color: #7876dd
+
+      &::placeholder
+        color: #cecee4
+
+    .new-task-btn
+      height: 4.75rem
+      border-radius: calc(4.75rem / 2)
+      background-color: #ea85e0
+      font-size: 1.5rem
+      font-weight: 600
+      transition: 
+        property: box-shadow
+        duration: 300ms
+
+      &:hover
+        box-shadow: 0 10px 15px -10px rgba(0, 0, 0, .5)
+
+    .important-container
+      padding: 0 1.875rem
+      margin-bottom: 3rem
+
+    .important-label
+      width: 100%
+      margin-bottom: 0
+      color: white
+
+    .important-check
+      display: none
+      position: relative
+
+      & + label
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+
+      & + label:after
+        content: ''
+        display: inline-block
+        width: 3.75rem
+        height: 1.875rem
+        border-radius: calc( 1.875rem / 2 )
+        background-color: white
+
+      & + label:before
+        content: ''
+        position: absolute
+        right: calc( 3.75rem + 1.875rem + 0.125rem )
+        display: inline-block
+        width: 1.875rem
+        height: 1.875rem
+        border-radius: calc( 1.875rem / 2 )
+        background-color: #cecee4
+        transition: 
+          property: right, background-color
+          duration: 300ms
+
+      &:checked + label:before
+        background-color: #ea85e0
+        right: calc( 1.875rem + 1.875rem )
+
+  .form-notification
+    height: 2rem
+    border:
+      style: solid
+      width: 1px
+    border-radius: 1rem
+    font-weight: 500
+
+    &.error
+      color: #ea85e0
+      border-color: #ea85e0
+
+    &.success
+      color: white
+      border-color: white
+        

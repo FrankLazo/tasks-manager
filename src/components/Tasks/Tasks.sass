@@ -1,0 +1,83 @@
+.tasks
+  padding: 7.5rem 3.75rem 0 0 !important
+
+  .h-tasks
+    padding-top: 1rem
+
+    .title,
+    .subtitle
+      padding-left: 0 !important
+
+    input
+      height: 2rem
+      padding: 0 1rem
+      border: 1px solid #6664cc
+      border-radius: 1rem
+      outline: none
+      animation-name: showText-one
+      animation-duration: 1500ms
+    
+    .input-new-user-container
+      position: relative
+
+      span
+        position: absolute
+        top: .625rem
+        left: 1rem
+        font-size: .75rem
+        line-height: .75rem
+        color: #ea85e0
+
+    .btn-change-user,
+    .btn-change-user-ok,
+    .btn-change-user-cancel
+      width: 9rem
+      height: 3rem
+      margin-left: .25rem
+      background-color: #f4f4f4
+      border: none
+      border-radius: 1.5rem
+      font-size: .875rem
+      transition:
+        property: background-color, color, width
+        duration: 300ms
+        timing-function: ease-out
+
+      &:hover
+        background-color: #6664cc
+        color: white !important
+
+    .btn-change-user-ok
+      color: white !important
+      width: 3rem
+      background-color: #6664cc
+
+    .btn-change-user-cancel
+      width: 3rem
+      animation-name: showText-one
+      animation-duration: 1500ms
+
+    .btn-text-change-user
+      animation-name: showText-one
+      animation-duration: 1500ms
+
+    .btn-text-change-user-ok
+      animation-name: showText-two
+      animation-duration: 1500ms
+
+  ul
+    margin-top: 2.5rem
+    padding-left: 0
+    list-style-type: none
+
+@keyframes showText-one
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes showText-two
+  0%
+    opacity: 0
+  100%
+    opacity: 1
